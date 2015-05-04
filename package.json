@@ -1,9 +1,8 @@
 {
   "name": "matias-snippets",
-  "version": "0.0.2",
+  "main": "./lib/matias-snippets",
+  "version": "0.0.4",
   "description": "My perfects snippets",
-  "activationCommands": {
-  },
   "repository": "https://github.com/rodrigopmatias/atom-matias-snippets.git",
   "license": "MIT",
   "engines": {
