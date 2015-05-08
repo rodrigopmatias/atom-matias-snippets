@@ -1,5 +1,5 @@
 '.source.js':
-    'Ext.Msg Async':
+    'Ext.Msg-Async':
         'prefix': 'ext-msg-async',
         'body': '''
 Ext.Msg.show({
