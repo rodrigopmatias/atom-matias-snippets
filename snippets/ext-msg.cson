@@ -1,0 +1,10 @@
+'.source.js':
+    'Ext.Msg':
+        'prefix': 'ext-msg',
+        'body': '''
+Ext.Msg.show({
+    title: '$1',
+    msg: '$2',
+    icon: Ext.Msg.$3
+    buttons: Ext.Msg.$4
+});'''

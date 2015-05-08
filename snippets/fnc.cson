@@ -1,0 +1,10 @@
+'.source.js':
+    'fnc':
+        'prefix': 'fnc'
+        'body': '''
+$1: function($2) {
+    if(!$3)
+        $3 = Ext.create($4);
+
+    return $3;
+}$5'''

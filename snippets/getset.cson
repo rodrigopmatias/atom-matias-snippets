@@ -1,0 +1,27 @@
+'.source.js':
+    'getset':
+        'prefix': 'getset',
+        'body': '''
+$1: function(value, dispatch) {
+    dispatch = (dispatch === $2 ? true : dispatch);
+
+    if(value !== $2) {
+        this._$1 = value;
+
+        if(dispatch)
+            this.observe$3();
+    }
+
+    return this._$1;
+},
+
+observe$3: function() {
+    value = this.$1();
+
+    if(value) {
+        console.info('$1 com valor');
+    }
+    else {
+        console.info('$2 sem valor');
+    }
+}$4'''

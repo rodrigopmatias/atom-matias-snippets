@@ -1,0 +1,4 @@
+'.source.js':
+    'function':
+        'prefix': 'fn'
+        'body': '$1: function($2) {$3}$4'
