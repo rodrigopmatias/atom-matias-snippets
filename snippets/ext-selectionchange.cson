@@ -1,0 +1,15 @@
+'.source.js':
+    'Ext.Msg':
+        'prefix': 'ext-selectionchange',
+        'body': '''
+$1.on({
+    scope: $2,
+    selectionchange: function(sel) {
+        var selection = sel.getSelection$2();
+
+        if(selection.length > 0)
+            $1(selection[0].get('pk'));
+        else
+            $1(null);
+    }
+});'''

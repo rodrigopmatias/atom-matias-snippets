@@ -1,0 +1,8 @@
+'.source.python':
+    'coding':
+        'prefix': 'overwrite'
+        'body': '''
+def $1(self, *args, **kwags):
+    $4
+
+    super($3, self).$1(*args, **kwags)'''
