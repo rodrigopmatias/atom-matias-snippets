@@ -1,0 +1,9 @@
+'.source.js':
+    'Ext.Msg':
+        'prefix': 'ext-define',
+        'body': '''
+Ext.define('$1', {
+    extend: '$2',
+
+    $3
+})'''
