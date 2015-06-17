@@ -1,0 +1,4 @@
+'.source.js':
+    'fnc':
+        'prefix': 'ext-spclass'
+        'body': '$1.superclass.$2.call(this, $3);$0'

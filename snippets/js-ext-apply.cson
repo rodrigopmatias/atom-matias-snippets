@@ -1,0 +1,10 @@
+'.source.js':
+    'fnc':
+        'prefix': 'ext-apply'
+        'body': '''
+Ext.apply$1(
+    $2,
+    {
+        $0
+    }
+)'''
