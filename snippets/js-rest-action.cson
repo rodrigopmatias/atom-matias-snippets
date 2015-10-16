@@ -1,0 +1,31 @@
+'.source.js':
+    'rest-action':
+        'prefix': 'rest-action'
+        'body': '''
+$1: function(pk, cbSuccess, cbFailure, cbCallback) {
+    this.request(
+        '$1',
+        $2,
+        '$3',
+        {
+            params: {
+                pk: pk
+            },
+            scope: this,
+            callback: function() {
+                core.invoke((cbCallback || {fn: Ext.emptyFn}));
+            },
+            success: function(xhr) {
+                var rst = Ext.decode(xhr.responseText);
+
+                if(rst.success)
+                    core.invoke((cbSuccess || {fn: Ext.emptyFn}), rst);
+                else
+                    core.invoke((cbFailure || {fn: Ext.emptyFn}), rst.message);
+            },
+            failure: function() {
+                core.invoke((cbFailure || {fn: Ext.emptyFn}), 'Recurso indisponivel no momento.');
+            }
+        }
+    );
+}$4'''
