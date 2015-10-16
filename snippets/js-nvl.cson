@@ -1,4 +1,4 @@
 '.source.js':
-    'fnc':
+    'nullValue':
         'prefix': 'nvl'
         'body': '$1 = core.nullValue($1, $2);'

@@ -1,5 +1,5 @@
 '.source.js':
-    'fnc':
+    'Ext.apply':
         'prefix': 'ext-apply'
         'body': '''
 Ext.apply$1(

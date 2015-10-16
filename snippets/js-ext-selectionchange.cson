@@ -1,5 +1,5 @@
 '.source.js':
-    'Ext.Msg':
+    'Ext.SelectionChange':
         'prefix': 'ext-selectionchange',
         'body': '''
 $1.on({

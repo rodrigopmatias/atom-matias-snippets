@@ -1,5 +1,5 @@
 '.source.js':
-    'Ext.Msg':
+    'Ext.define':
         'prefix': 'ext-define',
         'body': '''
 Ext.define('$1', {

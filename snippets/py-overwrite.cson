@@ -1,5 +1,5 @@
 '.source.python':
-    'coding':
+    'overwrite':
         'prefix': 'overwrite'
         'body': '''
 def $1(self, *args, **kwags):
