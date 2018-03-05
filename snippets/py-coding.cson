@@ -1,4 +1,0 @@
-'.source.python':
-    'coding':
-        'prefix': 'coding'
-        'body': '# -*- coding: utf-8 -*- $1'

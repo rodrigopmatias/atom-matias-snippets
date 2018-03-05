@@ -1,0 +1,57 @@
+'.source.js':
+    'Ext.SuperClass':
+        'prefix': 'ext-spclass'
+        'body': '$1.superclass.$2.call(this, $3);$0'
+    'Ext.SelectionChange':
+        'prefix': 'ext-selectionchange',
+        'body': '''
+$1.on({
+    scope: $2,
+    selectionchange: function(sel) {
+        var selection = sel.getSelection$2();
+
+        if(selection.length > 0)
+            $1(selection[0].get('pk'));
+        else
+            $1(null);
+    }
+});'''
+    'Ext.Msg':
+        'prefix': 'ext-msg',
+        'body': '''
+Ext.Msg.show({
+    title: '$1',
+    msg: '$2',
+    icon: Ext.Msg.$3,
+    buttons: Ext.Msg.$4
+});'''
+    'Ext.Msg-Async':
+        'prefix': 'ext-msg-async',
+        'body': '''
+Ext.Msg.show({
+    title: '$1',
+    msg: '$2',
+    icon: Ext.Msg.$3,
+    buttons: Ext.Msg.$4,
+    scope: $4,
+    fn: function(btn) {
+        $5
+    }
+});'''
+    'Ext.apply':
+        'prefix': 'ext-apply'
+        'body': '''
+Ext.apply$1(
+    $2,
+    {
+        $0
+    }
+)'''
+    'Ext.define':
+        'prefix': 'ext-define',
+        'body': '''
+Ext.define('$1', {
+    extend: '$2',
+
+    $3
+})'''

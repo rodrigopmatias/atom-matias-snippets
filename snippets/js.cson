@@ -1,6 +1,6 @@
 '.source.js':
     'rest-action':
-        'prefix': 'rest-action'
+        'prefix': 'js-rest-action'
         'body': '''
 $1: function(pk, cbSuccess, cbFailure, cbCallback) {
     this.request(
@@ -29,3 +29,44 @@ $1: function(pk, cbSuccess, cbFailure, cbCallback) {
         }
     );
 }$4'''
+    'nullValue':
+        'prefix': 'js-nvl'
+        'body': '$1 = ($1 || $2);$0'
+    'getset':
+        'prefix': 'js-getset',
+        'body': '''
+$1: function(value, dispatch) {
+    dispatch = (dispatch === $2 ? true : dispatch);
+
+    if(value !== $2) {
+        this._$1 = value;
+
+        if(dispatch)
+            this.observe$3();
+    }
+
+    return this._$1;
+},
+
+observe$3: function() {
+    var value = this.$1();
+
+    if(value) {
+        console.info('$1 com valor');
+    }
+    else {
+        console.info('$1 sem valor');
+    }
+}$4'''
+    'fnc':
+        'prefix': 'js-fnc'
+        'body': '''
+$1: function($2) {
+    if(!$3)
+        $3 = Ext.create($4);
+
+    return $3;
+}$5'''
+    'function':
+        'prefix': 'js-fn'
+        'body': '$1: function($2) {$3}$4'

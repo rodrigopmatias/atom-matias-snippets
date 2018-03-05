@@ -5,3 +5,6 @@
 def $1(self, *args, **kwags):
     $4
     super($3, self).$1(*args, **kwags)'''
+    'coding':
+        'prefix': 'coding'
+        'body': '# -*- coding: utf-8 -*- $1'

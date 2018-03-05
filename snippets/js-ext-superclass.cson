@@ -1,4 +1,0 @@
-'.source.js':
-    'Ext.SuperClass':
-        'prefix': 'ext-spclass'
-        'body': '$1.superclass.$2.call(this, $3);$0'
