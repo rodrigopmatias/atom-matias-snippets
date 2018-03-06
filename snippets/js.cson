@@ -36,19 +36,19 @@ $1: function(pk, cbSuccess, cbFailure, cbCallback) {
         'prefix': 'js-getset',
         'body': '''
 $1: function(value, dispatch) {
-    dispatch = (dispatch === $2 ? true : dispatch);
+    dispatch = (dispatch === ${2:undefined} ? true : dispatch);
 
-    if(value !== $2) {
+    if(value !== ${2:undefined}) {
         this._$1 = value;
 
         if(dispatch)
-            this.observe$3();
+            this.$1Observe();
     }
 
     return this._$1;
 },
 
-observe$3: function() {
+$1Observe: function() {
     var value = this.$1();
 
     if(value) {

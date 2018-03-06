@@ -3,8 +3,8 @@
         'prefix': 'overwrite'
         'body': '''
 def $1(self, *args, **kwags):
-    $4
+    $0
     super($3, self).$1(*args, **kwags)'''
     'coding':
         'prefix': 'coding'
-        'body': '# -*- coding: utf-8 -*- $1'
+        'body': '# -*- coding: utf-8 -*- $0'
